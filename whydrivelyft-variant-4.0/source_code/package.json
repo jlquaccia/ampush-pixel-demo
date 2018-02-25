@@ -1,0 +1,54 @@
+{
+  "name": "Lyft",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "webpack --config webpack.config.js --watch --progress --colors",
+    "build": "webpack --config webpack.config.js -p"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "static",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.9",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "babel-runtime": "^6.22.0",
+    "browser-sync": "^2.14.0",
+    "browser-sync-webpack-plugin": "^1.1.2",
+    "clean-webpack-plugin": "^0.1.10",
+    "compression-webpack-plugin": "^0.4.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "custom-event": "^1.0.1",
+    "es6-promise": "^4.2.2",
+    "eslint": "^4.2.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.8.0",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "firebase": "^4.8.1",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.2",
+    "lory.js": "^2.3.3",
+    "resolve-url-loader": "^2.1.0"
+  }
+}

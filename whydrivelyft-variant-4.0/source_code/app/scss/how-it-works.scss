@@ -1,0 +1,323 @@
+//SCSS for How it works pagead
+
+.how-it-works {
+
+  .section-container {
+    margin: 0 auto;
+    max-width: 930px;
+  }
+
+  &__full-hero {
+    background: url('../img/hero-img.jpg') no-repeat 50%;
+    background-origin: content-box;
+    background-position: 30%;
+    background-size: cover;
+
+    @include mobile {
+      background-image: url('../img/hero-img-mob.jpg');
+      background-position: inherit;
+    }
+  }
+
+  &__full-hero-title {
+    font-size: 33px;
+    color: $color-white;
+    max-width: 600px;
+    font-weight: 100;
+    padding-left: 10px;
+
+    @include mobile {
+      font-weight: 300;
+      width: 280px;
+      text-align: left;
+      line-height: 45px;
+      padding-left: 10px;
+    }
+
+    @include mobile-up {
+      font-size: 40px;
+    }
+
+    @include tablet-up {
+      padding-left: 0;
+      font-size: 56px;
+    }
+  }
+
+  &__registration-steps {
+    li {
+      padding: 50px $block-spacing-30 0px;
+      text-align: center;
+      background-color: white;
+    }
+
+    li:first-child {
+      padding-top: 20px;
+    }
+
+    li:nth-child(even) {
+      background: $color-body;
+    }
+
+    h3 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: $block-spacing-10;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__steps-icon {
+    margin: 0 auto;
+  }
+
+  .section-white {
+    padding: 0;
+  }
+
+  .section-gray {
+    background: $color-white;
+  }
+
+  &__hit-the-road {
+    margin: 0 auto;
+    max-width: 370px;
+
+    .hit-the-road-title {
+      text-align: center;
+    }
+
+    h3 {
+      background-color: $color-dark-purple;
+      color: $color-white;
+      display: inline-block;
+      font-size: $font-size-lg;
+      font-weight: bold;
+      padding: 8px $block-spacing-15 $block-spacing-10;
+    }
+
+    h4 {
+      font-size: $font-size-normal;
+      font-weight: 400;
+    }
+
+    ol {
+      font-size: $font-size-x-sm;
+      list-style-type: decimal;
+      padding-left: 20px;
+    }
+  }
+
+  @include tablet-up {
+    .full-hero {
+      &__wrapper {
+        justify-content: center;
+      }
+    }
+  }
+
+  @include sm-desktop-up {
+    &__registration-steps {
+
+      ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      li {
+        -ms-flex: 1 0 0%;
+        -webkit-box-flex: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1 0 0%;
+        padding: 30px 28px;
+
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: normal;
+          margin-bottom: 0;
+        }
+      }
+
+      li:nth-child(even) {
+        background: $color-white;
+      }
+    }
+
+    &__steps-icon {
+      margin-bottom: 30px;
+
+      img {
+        height: 60px;
+        width: auto;
+      }
+    }
+
+    &__steps-content {
+      min-height: 130px;
+    }
+
+    &__hit-the-road {
+
+      padding: 30px 0;
+
+      h3 {
+        padding: 8px $block-spacing-40 $block-spacing-10;
+      }
+
+      .hit-the-road-title {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -30px;
+      }
+
+    }
+
+    .section-white {
+      padding: 60px 0;
+    }
+
+    .section-gray {
+      background: $color-body;
+      position: relative;
+    }
+  }
+}
+
+.arrow-down-white {
+  display: none;
+  @include tablet-down {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    z-index: 1;
+    position: relative;
+    border-top: 25px solid white;
+    margin: 50px auto -75px;
+    padding: 50px 0px 0px;
+  }
+
+}
+
+.arrow-down-gray {
+  display: none;
+  @include tablet-down {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    z-index: 1;
+    position: relative;
+    border-top: 25px solid $color-body;
+    margin: 50px auto -75px;
+    padding: 50px 0px 0px;
+  }
+
+}
+
+
+// slider specific scss
+
+.slider-thumbnail {
+  padding: 20px 0 40px;
+
+  .slide-content {
+    @include flex;
+    align-items: center;
+    @include flex-box(auto);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    white-space: normal;
+
+    &--image {
+      flex-shrink: 0;
+
+      img {
+        max-height: 250px;
+        width: auto;
+      }
+    }
+
+    &--text {
+      text-align: center;
+      margin-top: 40px;
+    }
+    &--text-title {
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 8px 0 5px;
+    }
+  }
+
+  @include mobile-up {
+    padding: 40px 0 60px;
+
+    .slide-content {
+      flex-direction: row;
+      padding: 0 40px;
+
+      &--text {
+        padding-left: 6%;
+        text-align: left;
+      }
+      &--text-title {
+        padding-left: 6%;
+        text-align: left;
+      }
+    }
+  }
+
+  @include tablet-up {
+
+    .slide-content {
+      padding: 0 120px;
+
+      &--image {
+        img {
+          max-height: 400px;
+          width: auto;
+        }
+      }
+
+      &--text {
+        padding-left: 9%
+      }
+      &--text-title {
+        padding-left: 9%
+      }
+    }
+  }
+
+  @include desktop-up {
+
+    .slide-content {
+
+      &--text {
+        padding-left: 12%
+      }
+      &--text-title {
+        padding-left: 12%
+      }
+    }
+  }
+}

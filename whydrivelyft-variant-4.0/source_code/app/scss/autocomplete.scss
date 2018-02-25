@@ -1,0 +1,102 @@
+.intro__form-container {
+  position: relative;
+}
+
+#autocompleter, #signup-autocompleter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 25px;
+  left: 25px;
+  z-index: 999;
+  background-color: $color-body;
+  font-size: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+  .pac-icon {
+    display: inline;
+    display: flex;
+    align-items: center;
+    img {
+      width: 15px;
+      padding: 0 10px;
+
+    }
+  }
+  .pac-item {
+    width: 100%;
+    font-size: 12px;
+    border-bottom: 1px solid $color-moonstone;
+    display: flex;
+    align-items: center;
+    @include mobile {
+      padding: 9px 0px;
+    }
+    @include tablet {
+      line-height: 35.2px;
+    }
+
+  }
+  .pac-item:hover {
+    background-color: #D8DCE6;
+  }
+  .major-market {
+    order: -1;
+    span {
+      color: $color-pink;
+      display: inline-block;
+      position: absolute;
+      font-size: 11.5px;
+      right: 15px;
+      line-height: 35px;
+      cursor: default;
+      @include mobile {
+        flex-shrink: 1;
+        font-size: .8em;
+        line-height: 18px;
+      }
+      .tooltiptext {
+        display: none;
+        width: 120px;
+        background-color: #333347;
+        color: #fff;
+        text-align: center;
+        padding: 9px;
+        border-radius: 6px;
+        font-size: 10px;
+        line-height: 15px;
+        position: absolute;
+        top: -5px;
+        left: 120%; 
+        z-index: 1;
+      }
+      .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        right: 100%; /* To the left of the tooltip */
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent #333347 transparent transparent;
+      } 
+    }
+    @include tablet-up {
+      span:hover .tooltiptext {
+       display: block;
+      }
+    }
+    @include mobile {
+      span:active .tooltiptext {
+        display: block;
+      }
+    }
+  }
+}
+
+#signup-autocompleter {
+    width: 300px;
+    left: 0px;
+    @include mobile {
+      width: 100%;
+    }
+}

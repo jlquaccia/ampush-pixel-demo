@@ -1,0 +1,163 @@
+
+.slider-thumb {
+  margin: 0 auto 20px;
+  position: relative;
+  width: 320px;
+}
+
+.frame-thumb {
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 270px;
+
+  li {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+  }
+}
+
+
+.slides-thumb {
+  display: inline-block;
+  transform: translate3d(-890px, 0px, 0px);
+  transition-duration: 0ms;
+}
+
+.simple > .frame-thumb li {
+  margin-right: 10px;
+  width: 270px;
+}
+
+.dots {
+  margin: 0px 0 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+@include mobile-up {
+  .dots {
+     margin: 30px 0 0;
+  }
+
+}
+
+.dots > li {
+  background-color: #d7dce6;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px;
+  margin: 0 5px;
+  width: 10px;
+}
+
+.dots > li.active {
+  background-color: $color-purple; // MAKE IT purple CAUSE ACTIVE!!
+}
+
+.simple > .frame-thumb li:last-child {
+  margin-right: 0;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  display: block;
+  margin-top: -25px;
+  position: absolute;
+  top: 50%;
+
+  img {
+    width: auto;
+  }
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+
+.next svg,
+.prev svg {
+  transition: .4s;
+  width: 25px;
+
+  polyline {
+    fill: #d7dce6;
+  }
+}
+
+.next svg:hover,
+.prev svg:hover {
+  transform: scale(1.1);
+}
+
+@include mobile-up {
+
+  .slider-thumb {
+    margin: 0 auto 30px;
+    width: 480px;
+  }
+
+  .frame-thumb {
+    width: 420px;
+  }
+
+  .simple > .frame-thumb li {
+    width: 420px;
+  }
+}
+
+@include tablet-up {
+
+  .slider-thumb {
+    margin: 0 auto 30px;
+    width: 768px;
+  }
+
+  .frame-thumb {
+    width: 700px;
+  }
+
+  .simple > .frame-thumb li {
+    width: 700px;
+  }
+}
+
+@include sm-desktop-up {
+
+  .slider-thumb {
+    margin: 0 auto 30px;
+    width: 900px;
+  }
+
+  .frame-thumb {
+    width: 840px;
+  }
+
+  .simple > .frame-thumb li {
+    width: 840px;
+  }
+}

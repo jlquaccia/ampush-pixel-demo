@@ -1,0 +1,433 @@
+.intro {
+
+  &__side-text{
+    background: white;
+    bottom: 50px;
+    height: 100px;
+    left: -150px;
+    padding: 20px;
+    position: absolute;
+    width: 250px;
+  }
+
+  &__side-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    p{
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-bottom: 70px;
+    position: relative;
+
+    @include mobile-down {
+      &.hide-on-mobile-port {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    background-color: #e3cedb;
+    height: auto;
+    position: relative;
+    padding-top: 85px;
+
+    @include tablet-down {
+      overflow: hidden;
+    }
+  }
+
+  &__full-hero {
+    background: url(../img/drive-growth.jpg);
+    background-position: 30% -74px;
+    background-size: cover;
+    height: 616px;
+    position: absolute;
+    width: $block-container;
+  }
+
+  &__title,
+  &__navpage{
+    color: $color-white;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 33.6px;
+    margin: 0;
+    padding: 95px 13px 17px;
+    text-align: center;
+
+    &--modify {
+      padding: 74px 13px $block-spacing-15;
+    }
+
+    span {
+      display: block;
+      font-size:  $font-size-lg;
+    }
+  }
+
+  &__form {
+    padding: 0 13px;
+  }
+
+  &__form-container {
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 $color-form-shadow;
+    font-size: $font-size-x-sm;
+    padding: $block-spacing-21;
+
+
+    a {
+      color: $color-pink;
+
+      &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+      }
+    }
+
+    .blog-new__link-header {
+      color: #382b82;
+    }
+
+    .blog-new__link-header:hover {
+      color: #382b82;
+    }
+
+    h2 {
+      font-size: $font-size-md-sm;
+      font-weight: bold;
+      line-height: 26.95px;
+      margin: 0 0 14px;
+    }
+
+    p {
+      font-size: $font-size-xxx-sm;
+      line-height: $line-height-21;
+      margin-bottom: 14px;
+
+      &:last-child {
+        margin: 16px 0 0;
+      }
+    }
+
+    span {
+      color: $color-error-text;
+      font-size: $font-size-xxxx-sm;
+      line-height: $line-height-24;
+    }
+  }
+
+  &__field {
+    border: 1px solid $color-moonstone;
+    border-radius: 8px;
+    display: block;
+    font-size: $font-size-x-sm;
+    line-height: $line-height-21;
+    outline: 0;
+    padding: 16.4px 7px 3.5px;
+    width: 94.5%;
+
+    &--err {
+      border: 1px solid $color-error-text;
+    }
+  }
+
+  &__label {
+    -webkit-transform: translateY(0) scale(1);
+    -webkit-transform-origin: top left;
+    color: $color-form-shadow;
+    cursor: auto;
+    font-size: $font-size-xxx-sm;
+    font-style: italic;
+    left: 12px;
+    line-height: $line-height-24;
+    padding: 12px 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(0) scale(1);
+    transform-origin: top left;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+
+    &--update {
+      -webkit-transform: translateY(-.125em) scale(.625);
+      transform: translateY(-.125em) scale(.625);
+    }
+  }
+
+  &__phone-err {
+    display: none;
+  }
+
+  &__wrapper {
+    margin-bottom: $block-spacing-8;
+    position: relative;
+  }
+
+  &__agree {
+    line-height: $line-height-24;
+    margin: $block-spacing-8 0 7px;
+
+    label {
+      font-size: 12.25px;
+    }
+
+    input {
+      margin: 0 $block-spacing-8 0 0;
+      outline: 0;
+      vertical-align: middle;
+    }
+  }
+
+  &__agree-error {
+    display: block;
+    margin-top: $block-spacing-8;
+  }
+
+  &__btn-next,
+  &__btn-submit {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-appearance: button;
+    background-color: $color-pink;
+    border: 1.32px solid transparent;
+    border-bottom-width: 5px;
+    border-color: $color-cta-border;
+    border-radius: 8px;
+    color: $color-white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font-size-x-sm;
+    font-weight: 400;
+    line-height: $line-height-21;
+    margin: $block-spacing-8 0 0;
+    outline: 0;
+    padding: $block-spacing-8 0;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: $block-container;
+    font-family: "sofia-pro", sans-serif;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $color-cta-hover;
+      border-color: $color-cta-hover;
+    }
+  }
+
+  &__btn-submit {
+    display: none;
+    margin-top: 15px;
+  }
+
+  &__down-arrow {
+    display: none;
+  }
+
+  @media only screen and (min-width: 320px) {
+    &__title {
+      padding: 35px 13px 17px;
+
+      &--modify {
+        padding: 74px 13px $block-spacing-15;
+      }
+    }
+
+    &__navpage {
+      padding: 34px 13px 27px;
+
+      &--modify {
+        padding: 74px 13px $block-spacing-15;
+      }
+
+    }
+
+    &__form-container {
+      span {
+        font-size: $font-size-xxx-sm;
+      }
+    }
+  }
+
+  @include mobile-up {
+    &__content {
+      padding-top: 25px;
+    }
+
+    &__form{
+      margin: 0 auto;
+      padding: 0;
+      width: 450px;
+    }
+
+    &__title,
+    &__navpage {
+      padding: 30px 0 53px;
+      font-size: $font-size-md;
+      &--modify {
+        padding: 49px 0 20px;
+      }
+
+      span {
+        display: inline;
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  @include tablet-up {
+    &__content {
+      padding-top: 50px;
+    }
+
+    &__full-hero {
+      background-position: 50%;
+      height: 616px;
+    }
+
+    &__form{
+      width: 690px;
+
+    }
+
+    &__text {
+      margin: 0 auto;
+      padding: 0;
+      width: 475px;
+      position: relative;
+    }
+
+    &__title,
+    &__navpage {
+      font-size: $font-size-x-lg;
+      line-height: 66px;
+      margin-bottom: 16px;
+      padding: 0 0 45px;
+
+      &--modify {
+        padding: 65px 0 0;
+      }
+
+      span {
+        font-size: $font-size-x-lg;
+      }
+    }
+
+    &__form-container {
+      font-size: $font-size-lg;
+      line-height: 35.2px;
+      padding: $block-spacing-24;
+
+      h2 {
+        font-size: $font-size-lg;
+        line-height: 35px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: $font-size-x-sm;
+        line-height: $line-height-24;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__field {
+      padding: 18.4px $block-spacing-8 4px;
+    }
+
+    &__label {
+      font-size: $font-size-x-sm;
+    }
+
+    &__agree {
+
+      label {
+        font-size: $font-size-xxx-sm;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include sm-desktop-up {
+    &__full-hero {
+      background: url(../img/drive-growth.jpg) no-repeat 50%;
+      background-size: cover;
+    }
+
+  }
+
+  @media only screen and (min-width: 979px) {
+    &__form {
+      width: 960px;
+    }
+  }
+
+  @media only screen and (min-width: 980px) {
+    &__down-arrow {
+      width: 45px;
+      bottom: -23px;
+      display: block;
+      right: 48%;
+      position: absolute;
+    }
+
+    &__content {
+      @include flex;
+      height: 598px;
+      padding: 110px 0 0;
+    }
+
+    &__text {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      -webkit-align-self: auto;
+      align-self: auto;
+      @include flex-box(58.333%);
+      margin: -15px auto 0;
+      margin-left: -15px;
+      padding: 0;
+      width: 450px;
+      position: relative;
+    }
+
+    &__title,
+    &__navpage {
+      font-weight: 600;
+      padding: 0 80px 74px 0;//80px needed for IE or else title comes in 3 line
+    }
+
+    &__form {
+      -ms-flex-item-align: flex-start;
+      -ms-grid-row-align: flex-start;
+      -webkit-align-self: flex-start;
+      align-self: flex-start;
+      @include flex-box(41.667%);
+      margin-top: 3px;
+      padding: 0;
+    }
+
+    &__agree {
+      font-size: $font-size-xxx-sm;
+      margin: $block-spacing-8 0;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    padding: 20px 0;
+    padding-bottom: 75px;
+  }
+}

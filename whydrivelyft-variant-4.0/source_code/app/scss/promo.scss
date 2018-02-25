@@ -1,0 +1,107 @@
+
+.promohead {
+  background-color: #f3f3f5;
+  margin:0;
+  position: fixed;
+  top: 0;
+  width: $block-container;
+
+  &__image {
+    height: 74px;
+    position: relative;
+    top: -4px;
+
+    img {
+      margin: 15px 0 27px 15px;
+      width: 157px;
+    }
+
+    @include tablet-up {
+      img {
+        margin-left: 33px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.promo-content {
+  background-color: $color-white;
+  padding-top: 85px;
+  @include mobile {
+    padding-top: 104px;
+  }
+
+  &__section {
+    margin: 42px auto;
+    width: 81%;
+  }
+
+  .title {
+    color: $color-purple;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 $block-spacing-15 + 1;
+    text-align: center;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  &__promo-desc {
+
+    p {
+      font-size: 100%;
+      line-height: 24px;
+      margin: 0 0 16px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .bulleted {
+        padding-bottom: 7px;
+        padding-left: 22px;
+        text-indent: -.7em;
+      }
+
+      .bulleted:before {
+        content: "• ";
+        color: $color-pink;
+      }
+
+      .dash {
+        padding-bottom: 7px;
+        padding-left: 1em;
+        text-indent: -.7em;
+      }
+
+      .dash:before {
+        content: "—";
+        color: $color-black;
+        padding-right: 7px;
+      }
+    }
+  }
+
+  @include tablet-up {
+    padding-bottom: 0;
+
+    .title {
+      font-size: 30px;
+    }
+
+    &__section {
+      width: 670px;
+    }
+  }
+
+  @include sm-desktop-up {
+    &__section {
+      width: 755px;
+    }
+  }
+}

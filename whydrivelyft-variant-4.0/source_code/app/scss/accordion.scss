@@ -1,0 +1,97 @@
+.questions {
+  background-color: $color-purple;
+  color: $color-white;
+  margin-top: 3px;
+
+  &__quest {
+    padding: 15px 50px 15px 25px;
+    position: relative;
+
+    &::after {
+      -moz-transform: rotate(0deg);
+      -moz-transition: transform .33s ease 0s;
+      -ms-transform: rotate(0deg);
+      -oms-transition: transform .33s ease 0s;
+      -webkit-transform: rotate(0deg);
+      -webkit-transition: transform .33s ease 0s;
+
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $color-white;
+      position: absolute;
+      right: 25px;
+      top: 22px;
+      transform: rotate(0deg);
+      transition: transform .33s ease 0s;
+    }
+  }
+
+  &__question--open {
+
+    h3 {
+      &::after {
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        background-position: top left;
+        transform: rotate(90deg);
+      }
+    }
+
+    .questions__ans {
+      padding: 20px;
+      transition: max-height .5s ease-out;
+    }
+  }
+
+  &__ans {
+    line-height: 22px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height .5s ease-out, padding .2s ease-out;
+
+    @media only screen and (min-width: 480px) and (orientation: landscape) {
+      // only using !important b/c it was the only way to fix a bug on mobile chrome where question answers get hidden when rotating from portrait to landscape
+      max-height: 100% !important;
+    }
+
+    .wrapper {
+      max-width: 100%;
+      padding: 20px 0 15px 0;
+      text-align: center;
+
+      &__cta {
+        background-color: $color-cta;
+        border: 1px solid $color-cta;
+        border-radius: 8px;
+        color: $color-white;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 10px 22%;
+        text-align: center;
+      }
+    }
+  }
+
+  @include mobile-up {
+
+    &__ans {
+        max-height: auto;
+    }
+
+    &__quest {
+      font-weight: normal;
+    }
+  }
+}
+@include mobile-up {
+  .what-is-lyft .questions__ans {
+    text-align: center;
+  }
+}

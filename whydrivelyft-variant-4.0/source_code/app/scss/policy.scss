@@ -1,0 +1,56 @@
+/* Policy */
+.block {
+  &__policy-icon {
+    @include flex-box($block-container);
+  }
+
+  &__policy-copy {
+    text-align: center;
+    @include flex-box($block-container);
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__policy-icon svg{
+    display: block;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
+  }
+
+  @include tablet-up {
+    &__policy-icon {
+      padding: 10px $block-spacing-15;
+    }
+
+    &__policy-icon svg {
+      display: block;
+      height: 128px;
+      margin: 0 auto;
+      width: 128px;
+    }
+
+    &__policy-copy {
+      @include flex-box(58%);
+      padding: 15px $block-spacing-15;
+      p{
+        margin-bottom: 11px;
+      }
+    }
+  }
+}
+
+@include mobile-up {
+  .policy {
+    background-color: $color-body;
+    padding: 50px 0;
+  }
+
+  .block {
+    &__policy-copy {
+      padding: 50px 0;
+    }
+  }
+}

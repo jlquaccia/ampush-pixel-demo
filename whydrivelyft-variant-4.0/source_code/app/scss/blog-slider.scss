@@ -1,0 +1,348 @@
+@import 'slider-thumbnail';
+
+.blog-new {
+  &__slider {
+    padding-top: 107px;
+
+    .slides-thumb {
+      height: 245px;
+    }
+
+    .slider-thumb {
+      margin: 0 auto;
+      width: 320px;
+    }
+
+    .frame-thumb {
+      width: 280px;
+    }
+
+    .simple > .frame-thumb li {
+      width: 280px;
+    }
+
+    .prev,
+    .next {
+      background: rgba(53, 35, 132, .8);
+      border-radius: 50%;
+      display: inline-block;
+      height: 3em;
+      width: 3em;
+    }
+
+    .prev:after,
+    .next:after {
+      -moz-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      border-top: .2em solid $color-white;
+      border-right: .2em solid $color-white;
+      content: '';
+      display: inline-block;
+      height: 1.1em;
+      margin-left: 1.11em;
+      margin-top: 1em;
+      transform: rotate(-135deg);
+      width: 1.1em;
+    }
+
+    .next:after {
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      margin-left: .7em;
+      transform: rotate(45deg);
+    }
+
+    &-content {
+      @include flex;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background: no-repeat center center;
+      background-size: cover;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 5px;
+      height: 240px;
+      position: relative;
+
+      a {
+        text-decoration: none;
+      }
+
+      .text {
+        background: rgba(255,255,255,.7);
+        color: $color-content;
+        max-width: 300px;
+        padding: 5px;
+        text-align: center;
+        transition: .2s ease-out;
+
+        hr {
+          border: .6px solid $color-purple;
+          margin: 3px;
+        }
+
+        h2 {
+          color: $color-purple;
+          font-size: $font-size-xx-sm;
+          line-height: 16px;
+          margin: 0;
+          text-decoration: none;
+          white-space: normal;
+          word-wrap: break-word;
+        }
+
+        p {
+          height: 60px;
+          overflow: hidden;
+          white-space: normal;
+        }
+
+        @include mobile-up {
+          hr {
+            margin: 8px 0;
+          }
+        }
+
+        @include tablet-up {
+          max-width: 435px;
+          padding: 16px;
+
+          h2 {
+            color: $color-purple;
+            font-size: $font-size-normal;
+            line-height: 20px;
+          }
+
+          h2 {
+            font-size: $font-size-sm;
+          }
+
+          p {
+            height: auto;
+          }
+        }
+      }
+
+      .text:hover {
+        box-shadow: 0 5px 20px rgba(0,0,0,.8);
+        transform: translateY(-3px) scale(1.02);
+      }
+
+      @include tablet-up {
+        height: 450px;
+        justify-content: flex-start;
+        margin-top: 10px;
+        padding: 0 0 15px 15px;
+      }
+    }
+
+    .first-item {
+      background-image: url('../img/nyc_wide_angle-mob.jpg');
+      background-position-x: 0;
+    }
+
+    .second-item {
+      background-image: url('../img/iStock-636194274.jpg');
+      background-position-x: 0;
+    }
+
+    .third-item {
+      background-image: url('../img/blog2-mob.jpg');
+    }
+
+    @media only screen and (min-width: 350px) {
+      .slider-thumb {
+        width: 350px;
+      }
+
+      .frame-thumb {
+        width: 310px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 310px;
+      }
+    }
+
+    @media only screen and (min-width: 375px) {
+      .slider-thumb {
+        width: 375px;
+      }
+
+      .frame-thumb {
+        width: 335px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 335px;
+      }
+    }
+
+    @media only screen and (min-width: 400px) {
+      .slider-thumb {
+        width: 400px;
+      }
+
+      .frame-thumb {
+        width: 360px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 360px;
+      }
+    }
+
+    @include mobile-up {
+      padding-top: 111px;
+
+      .dots {
+          margin: 5px 0 0;
+      }
+
+      .prev,
+      .next {
+        height: 4em;
+        width: 4em;
+      }
+
+      .prev:after,
+      .next:after {
+        height: 1.4em;
+        margin-left: 1.5em;
+        margin-top: 1.3em;
+        width: 1.4em;
+      }
+
+      .next:after {
+        margin-left: .96em;
+      }
+
+      .second-item {
+        background-position-x: 0;
+      }
+
+      .slider-thumb {
+        width: 480px;
+      }
+
+      .frame-thumb {
+        width: 440px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 440px;
+      }
+    }
+
+    @media only screen and (min-width: 530px) {
+      .slider-thumb {
+        margin: 0 auto 30px;
+        width: 530px;
+      }
+
+      .frame-thumb {
+        width: 490px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 490px;
+      }
+    }
+
+    @media only screen and (min-width: 600px) {
+      .slider-thumb {
+        width: 600px;
+      }
+
+      .frame-thumb {
+        width: 560px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 560px;
+      }
+    }
+
+    @include tablet-up {
+
+      .first-item {
+        background-image: url('../img/nyc_wide_angle.jpg');
+      }
+
+      .second-item {
+        background-image: url('../img/iStock-636194274.jpg');
+      }
+
+      .third-item {
+        background-image: url('../img/blog2.jpg');
+      }
+
+      .slides-thumb {
+        height: 475px;
+      }
+
+      .slider-thumb {
+        margin: 0 auto 30px;
+        width: 768px;
+      }
+
+      .frame-thumb {
+        width: 722px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 722px;
+      }
+    }
+
+    @include sm-desktop-up {
+      padding-top: 85px;
+
+      .prev {
+        left: -15px;
+      }
+
+      .next {
+        right: -15px;
+      }
+
+      .slider-thumb {
+        margin: 0 auto 30px;
+        width: 870px;
+      }
+
+      .frame-thumb {
+        width: 860px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 865px;
+      }
+    }
+
+    @media only screen and (min-width: 960px) {
+
+      .prev {
+        left: -24px;
+      }
+
+      .next {
+        right: -24px;
+      }
+
+      .slider-thumb {
+        margin: 0 auto 30px;
+        width: 900px;
+      }
+
+      .frame-thumb {
+        width: 885px;
+      }
+
+      .simple > .frame-thumb li {
+        width: 885px;
+      }
+    }
+  }
+}

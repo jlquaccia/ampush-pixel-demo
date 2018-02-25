@@ -1,0 +1,236 @@
+$color-white: #fff;
+$color-pink: #ff00bf;
+$color-link-hover: #b30086;
+$color-cta: #ea0b8c;
+$color-cta-hover: #b9096f;
+$color-cta-border: #b80b8c;
+$color-moonstone: #d8dce6;
+$color-form-shadow: #728099;
+$color-body-text: #333447;
+$color-error-text: #e60000;
+$color-body: #f3f3f5;
+$color-black-shade: #474c62;
+$color-gery-shade: #bfc7d9;
+$color-purple: #352384;
+$color-dark-purple: #342284;
+$color-content: #333347;
+$color-black: #000;
+$color-dark-grey: #a3a3ac;
+$color-grey-black: #5d5959;
+
+//font
+@font-face {
+ font-family: 'sofia-pro';
+ src: url('../fonts/LyftPro/LyftPro-Regular/LyftPro-Regular.woff2') format('woff2'),
+      url('../fonts/LyftPro/LyftPro-Regular/LyftPro-Regular.woff') format('woff'),
+      url('../fonts/LyftPro/LyftPro-Regular/LyftPro-Regular.ttf') format('truetype'),
+      url('../fonts/LyftPro/LyftPro-Regular/LyftPro-Regular.eot') format('eot');
+}
+
+//border
+$border-black: 1px solid $color-black;
+
+//hero section height
+$height-mobile: 185px;
+$height-desktop: 450px;
+
+// Fonts.
+$font-size-x-lg: 48px;
+$font-size-lg: 30px;
+$font-size-md: 28px;
+$font-size-md-sm: 25px;
+$font-size-md-x-sm: 23px;
+$font-size-sm: 21px;
+$font-size-normal: 18px;
+$font-size-x-sm: 16px;
+$font-size-xx-sm: 15px;
+$font-size-xxx-sm: 14px;
+$font-size-xxxx-sm: 12px;
+$font-size-xxxxx-sm: 10px;
+
+// Breakpoints and media queries.
+$breakpoint-sm-mobile: 320px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-sm-desktop: 900px;
+$breakpoint-desktop: 1200px;
+$breakpoint-lg-desktop: 1441px;
+$breakpoint-xl-desktop: 2600px;
+
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-box($width) {
+  -ms-flex: 0 0 $width;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $width;
+  flex: 0 0 $width;
+}
+
+@mixin keyframes-20-to-0 {
+  from {
+    left: 20px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@mixin animation {
+  -moz-animation: animation 2s;
+  -webkit-animation: animation 2s;
+  animation: animation 2s;
+}
+
+@keyframes animation {
+  @include keyframes-20-to-0;
+}
+
+@-moz-keyframes animation {
+  @include keyframes-20-to-0;
+}
+
+@-webkit-keyframes animation {
+  @include keyframes-20-to-0;
+}
+@mixin mobile {
+  @media only screen and (min-width: $breakpoint-sm-mobile)  and (max-width: $breakpoint-mobile){
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media only screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-down {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 481px)  and (max-width: $breakpoint-tablet){
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $breakpoint-tablet + 1) {
+    @content;
+  }
+}
+
+@mixin sm-desktop {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin sm-desktop{
+  @media only screen and (min-width: 768px)  and (max-width: $breakpoint-sm-desktop){
+    @content;
+  }
+}
+
+@mixin sm-desktop-up {
+  @media only screen and (min-width: $breakpoint-sm-desktop) {
+    @content;
+  }
+}
+
+
+
+@mixin desktop-up {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin lg-desktop-up {
+  @media only screen and (min-width: $breakpoint-desktop + 1) {
+    @content;
+  }
+}
+
+@mixin xl-desktop {
+  @media only screen and (min-width: 901px)  and (max-width:$breakpoint-xl-desktop){
+    @content;
+  }
+}
+
+@mixin xl-desktop-up {
+  @media only screen and (min-width: $breakpoint-lg-desktop) {
+    @content;
+  }
+}
+
+$line-height-21: 21px;
+$line-height-24: 24px;
+
+$block-container: 100%;
+$block-wrapper: 930px;
+
+$block-spacing-8: 8px;
+$block-spacing-10: 10px;
+$block-spacing-15: 15px;
+$block-spacing-21: 21px;
+$block-spacing-24: 24px;
+$block-spacing-28: 28px;
+$block-spacing-20: 20px;
+$block-spacing-30: 30px;
+$block-spacing-40: 40px;
+$block-spacing-80: 80px;
+$block-spacing-109: 109px;
+
+$block-max-width: 1600px;
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+@mixin driver-cta {
+  border-radius: 7px;
+  font-size: 14px;
+  letter-spacing: .9px;
+  font-weight: 700;
+  padding: 7px 40px;
+  text-transform: none;
+  background: $color-pink;
+  color: $color-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-cta-hover;
+    color: $color-white;
+    text-decoration: none;
+  }
+}

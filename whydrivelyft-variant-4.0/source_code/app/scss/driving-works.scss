@@ -1,0 +1,55 @@
+  /* Why Lyft */
+  .block {
+    &__driving-works-list {
+
+      ul {
+        @include flex;
+        flex-wrap: wrap;
+      }
+
+      li {
+        text-align: center;
+        width: $block-container;
+      }
+      li:nth-child(3) .block__driving-works-icon img {
+        width: 30px;
+        height: 49px;
+      }
+
+      h4 {
+        font-size: $font-size-md-x-sm + 1;
+      }
+    }
+
+    &__driving-works-icon {
+      margin: 0 auto;
+      width: 64px;
+      height: 70px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    @include tablet-up {
+
+      &__driving-works-list {
+
+        li {
+          -ms-flex: 1 0 0%;
+          -webkit-box-flex: 0;
+          -webkit-flex: 1 0 0%;
+          flex: 1 0 0%;
+        }
+      }
+    }
+  }
+  .block.driving-works{
+
+    .questions__question--open {
+
+      .questions__ans {
+        padding: 10px;
+      }
+    }
+  }

@@ -1,0 +1,31 @@
+.goto-top {
+  bottom: 70px;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.hide-goto {
+  display: none;
+}
+
+@include mobile {
+  .hide-mob {
+    display: none;
+  }
+
+  .hide-landing {
+    display: none;
+  }
+}
+
+@include tablet {
+  .hide-mob {
+    display: none;
+  }
+}

@@ -1,0 +1,131 @@
+// Main Navigation SCSS
+.no-promo {
+  .nav__tabs a.tab-cta {
+    background: $color-pink;
+    color: $color-white;
+  }
+}
+
+.nav {
+  background: $color-body;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 38px;
+  z-index: 999;
+  -webkit-transition: transform 200ms;
+  -moz-transition: transform 200ms;
+  transition: transform 200ms;
+
+  &__lyft-logo {
+    line-height: 0;
+    margin: 0;
+
+    img {
+      width: 120px;
+    }
+
+    .nav__wdl-link {
+      display: inline-block;
+    }
+  }
+
+  &__tabs {
+    padding: 8px 0 0;
+
+    a {
+      color: $color-purple;
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin: 0 5px;
+      padding: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: font-weight .2s;
+      transition: font-weight .2s;
+    }
+
+    a:hover,
+    a.active {
+      border-bottom: 2px solid $color-purple;
+      padding-bottom: 4px;
+      font-weight: 700;
+    }
+  }
+
+  &__large-decive-tabs {
+    display: none;
+  }
+
+  &__fix-top {
+    -webkit-box-shadow: 0px -1px 8px 0px #999;
+    -moz-box-shadow: 0px -1px 8px 0px #999;
+    box-shadow: 0px -1px 8px 0px #999;
+    left: 0;
+    /*width: %;*/
+    z-index: 999;
+    -webkit-transform: translateY(-38px);
+    -moz-transform: translateY(-38px);
+    -o-transform: translateY(-38px);
+    transform: translateY(-38px);
+
+    .nav__tabs a.tab-cta {
+      background: $color-pink;
+      color: $color-white;
+    }
+  }
+
+  @include mobile-up {
+    padding: 7px 20px;
+
+    &__tabs a {
+      font-size: 12px;
+      margin: 0 13px;
+      padding: 0;
+    }
+  }
+
+  @include sm-desktop-up {
+    padding: 7px 20px;
+
+    &__lyft-logo {
+      float: left;
+
+      img {
+        width: 135px;
+      }
+    }
+
+    &__tabs {
+      float: right;
+      padding: 0;
+    }
+
+    &__large-decive-tabs {
+      display: inline-block;
+    }
+
+    &__tabs a.tab-cta {
+      background: $color-white;
+      border: 1px solid $color-pink;
+      border-radius: 7px;
+      color: $color-pink;
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 10px;
+      padding: 5px 40px;
+      text-transform: none;
+      -webkit-transition: background 1s, color 1s; /* Safari */
+      transition: background 1s, color 1s;
+    }
+
+    &__tabs a.tab-cta:hover {
+      background: $color-pink;
+      border: 1px solid $color-white;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,334 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: $color-white;
+  color: $color-content;
+  font-family: "sofia-pro", sans-serif;
+  font-size: $font-size-xxx-sm;
+  line-height: 1.5;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+
+  @include tablet-up {
+    font-size: $font-size-x-sm;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 16px 0;
+}
+
+h3 {
+  font-size: $font-size-sm;
+  margin-top: 0;
+
+  @include tablet-up {
+    font-size: $font-size-md-x-sm;
+  }
+}
+
+a {
+  color: $color-pink;
+}
+
+a:hover {
+  color: $color-link-hover;
+  text-decoration: underline;
+}
+
+.js-form {
+  display: none;
+
+  span {
+    display: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.hide-on-mobile-port {
+  display: none;
+
+  @include mobile-up {
+    display: block;
+  }
+}
+
+.show-on-mobile-port {
+  display: block;
+  -webkit-transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -o-transition: transform 300ms;
+  transition: transform 300ms;
+  @include mobile-up {
+    display: none;
+  }
+}
+
+.show-on-mobile-full {
+  display: block;
+  @include tablet-up {
+    display: none;
+  }
+}
+
+.hide-on-mobile-full {
+  display: none;
+
+  @include tablet-up {
+    display: block;
+  }
+}
+
+.show-on-mobile-port-home {
+  -webkit-transform: translateY(284px);
+  -moz-transform: translateY(284px);
+  -o-transform: translateY(284px);
+  transform: translateY(284px);
+  @include mobile-up {
+    display: none;
+  }
+}
+
+.max-wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+.section-white,
+.section-gray {
+  padding: 30px;
+}
+
+.section-gray {
+  background-color: $color-body;
+}
+
+.section-container {
+  margin: 0 auto;
+  max-width: 930px;
+}
+
+.block {
+  max-width: $block-container;
+
+  &__align-center {
+    text-align: center;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: $block-wrapper;
+
+    &--faq {
+      margin-top: $block-spacing-24;
+      padding: $block-spacing-28;
+    }
+
+    h3 {
+      background-color: $color-purple;
+      color: $color-white;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 2px 0 0;
+      padding: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__about-container,
+  &__why-lyft,
+  &__driving-works {
+    background-color: $color-white;
+    padding: 0;
+  }
+}
+
+.promo-banner {
+  background-color: $color-purple;
+  margin: 0;
+  -webkit-transition: transform 200ms;
+  -moz-transition: transform 200ms;
+  -o-transition: transform 200ms;
+  transition: transform 200ms;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  right: 0;
+
+  h6 {
+    margin: 0;
+  }
+
+  p {
+    color: $color-white;
+    display: block;
+    margin: 0;
+    padding: 9px 0;
+    text-align: center;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .showDesk {
+    display: none;
+  }
+}
+
+.hide-scroll {
+  -webkit-transform: translateY(-38px);
+  -moz-transform: translateY(-38px);
+  -o-transform: translateY(-38px);
+  transform: translateY(-38px);
+}
+
+.full-hero {
+  padding-top: 103px;
+  @include tablet-up {
+    padding-top: 85px;
+  }
+}
+
+.driver-cta {
+  padding: 60px 0;
+  text-align: center;
+
+  a {
+    @include driver-cta;
+    display: inline-block;
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  @include mobile {
+    padding: 0;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+
+    a {
+      color: $color-white;
+      background-color: $color-pink;
+      display: block;
+      margin: 10px auto;
+      padding: 10px 40px;
+      border-color: $color-pink;
+      width: 63%;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include mobile-up {
+  .landing-page {
+    padding-bottom: 0;
+  }
+
+  .block {
+
+    &__container {
+
+      h3 {
+        background-color: transparent;
+        color: $color-purple;
+        font-size: $font-size-lg;
+        font-weight: normal;
+        padding: 0 0 30px;
+        text-align: center;
+        text-transform: none;
+
+        &::after {
+          border: 0;
+        }
+      }
+    }
+
+    &__about-container,
+    &__why-lyft,
+    &__driving-works,
+    &__faq {
+      background-color: transparent;
+      padding: 50px 0;
+    }
+
+    &__faq {
+      padding-bottom: 0;
+    }
+
+    &__why-lyft {
+      color: $color-white;
+
+      h3 {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@include tablet-up {
+  .promo-banner {
+    .showDesk {
+      display: inline-block;
+    }
+  }
+
+  .section-white,
+  .section-gray {
+    padding: 60px 0;
+  }
+}
+
+.signup__flash-message {
+  display: none;
+  font-size: 1em;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  color: #e70001;
+  border: 1px solid #e70001;
+  border-radius: 5px;
+  padding: 7px;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  z-index: 99;
+  background-color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

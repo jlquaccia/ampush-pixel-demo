@@ -1,0 +1,280 @@
+.testimonial-hc {
+
+  .title {
+    color: $color-purple;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 $block-spacing-15 + 1;
+    padding-top: 10px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.blog-new .full-hero__wrapper {
+    @include tablet-up {
+      height: 450px;
+
+    }
+    @include mobile-up {
+      @include flex;
+      height: 400px;
+    }
+    @include tablet {
+
+    }
+}
+
+.links-section a {
+  display: block;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+ol.holiday {
+    list-style: decimal;
+    padding: 10px 5%;
+    li {
+      padding-bottom: 5px;
+    }
+    span {
+      font-weight: bold;
+      color: $color-purple;
+    }
+  }
+.content .holiday h2 {
+  padding: 0;
+}
+
+.content {
+  padding-top: 104px;
+
+  @include tablet-up {
+    padding-bottom: 0;
+
+    &__height {
+      padding-bottom: 0;
+    }
+  }
+
+  @include sm-desktop-up {
+    padding: 0;
+    padding-top: 85px;
+  }
+
+  &__section {
+    margin: 30px auto 0 auto;
+    width: 70%;
+
+    @include tablet-up {
+      width: 520px;
+    }
+    @include sm-desktop-up {
+      width: 805px;
+    }
+    @include mobile {
+      margin: 30px auto 50px auto;
+      width: 75%;
+    }
+  }
+
+  &__driver {
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+    padding: 20px 20px 0 20px;
+  }
+
+  &__section-blog {
+    background-color: $color-white;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px 0 20px;
+
+    strong {
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      padding: 0 5% 10px 5%;
+      text-align: center;
+    }
+  }
+
+  &__shortDesc {
+    font-size: 15px;
+    line-height: 26px;
+    padding: 15px 0 10px 0;
+    @include tablet-up {
+      font-size: 17px;
+    }
+  }
+
+  &__blogDesc {
+    h3 {
+      color: $color-purple;
+      font-size: $font-size-normal;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 5px;
+    }
+
+    h3.content__whydrivelyft {
+      margin-top: 0;
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 22px;
+      margin: 0 0 9px 0;
+    }
+  }
+
+  &__lineHeight {
+    h3 {
+      line-height: 32px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 26px;
+    }
+
+    @include tablet-up {
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__break {
+    margin-bottom: 25px;
+  }
+
+  &__pointer {
+    margin-bottom: 45px;
+    margin-top: 15px;
+    position: relative;
+
+    p {
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    hr {
+      background-color: $color-purple;
+      border: 0;
+      color: $color-purple;
+      height: 2px;
+    }
+
+    .pro-tip {
+      span {
+        background: $color-body;
+        color: $color-pink;
+        display: inline-block;
+        left: 50%;
+        margin-left: -50px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: -12px;
+        width: 100px;
+      }
+    }
+  }
+
+  .stick-bottom {
+    background: rgba(80, 76, 78, 0.7);
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    position: fixed;
+    text-transform: none;
+    width: 100%;
+  }
+
+  .block {
+
+    .container__inner {
+      padding: 10px 0;
+
+      @include tablet-up {
+        padding: 30px 0;
+      }
+    }
+
+    @include tablet-up {
+      background: none;
+      position: static;
+      width: auto;
+    }
+  }
+
+  @include tablet-up {
+    h3 {
+      font-size: 18px;
+    }
+
+    &__driver,
+    &__section-blog {
+      padding: 20px 100px 0 100px;
+    }
+  }
+
+  @include sm-desktop-up {
+
+    &__driver,
+    &__section-blog {
+      padding: 20px 0 0 0;
+    }
+
+    &__section-blog {
+      h2 {
+        font-size: 34px;
+        padding: 0 15% 10px 15%;
+      }
+    }
+  }
+
+  @include mobile {
+    h2 {
+      font-size: 20px;
+      padding: 0 0 10px 0;
+    }
+  }
+}
+
+.goto-top-desktop {
+  display: none;
+
+  @include sm-desktop-up {
+    display: block;
+  }
+}
+
+.stick-top {
+  top: 0;
+}
+
+.padding-modify {
+  padding-top: 68px;
+
+  @include mobile-up {
+    padding-top: 72px;
+  }
+
+  @include sm-desktop-up {
+    padding-top: 48px;
+  }
+}
+
+.no-promo {
+  .nav {
+    top: 0;
+  }
+}

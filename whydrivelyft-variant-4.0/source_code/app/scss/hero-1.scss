@@ -1,0 +1,204 @@
+.full-hero__wrapper {
+  flex-direction: column;
+  height: 410px;
+  justify-content: space-around;
+  position: relative;
+}
+
+.nav-timer {
+  -webkit-box-shadow: 0px -1px 8px 0px #999;
+  -moz-box-shadow: 0px -1px 8px 0px #999;
+  box-shadow: 0px -1px 8px 0px #999;
+  top: 0;
+}
+
+.timer {
+
+  &__full-hero {
+    background: url('../img/drive-growth.jpg') no-repeat 5%;
+    background-origin: content-box;
+    background-size: cover;
+    height: 410px;
+    padding-top: 70px;
+  }
+
+  &__full-hero-christmas {
+    background: url('../img/hero-christmas.jpg') no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+  }
+
+  &__full-hero-text {
+    align-self: center;
+    color: $color-content;
+    flex: 1;
+    font-size: $font-size-md-sm;
+    font-weight: 600;
+    margin-top: 10px;
+	}
+
+  &__full-hero-text.white {
+    align-self: center;
+    color: $color-white;
+    flex: 1;
+    font-size: $font-size-md-sm;
+    font-weight: 600;
+    margin-top: 10px;
+    text-shadow: 1px 1px $color-black;
+  }
+
+  &__full-hero-content {
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $color-white;
+    font-size: $font-size-x-sm;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    width: 285px;
+
+    @include tablet-down {
+      position: relative;
+      top: -15px;
+    }
+
+    .timerbox {
+      margin-bottom: 15px;
+    }
+
+    .driver-cta {
+      background-color: transparent;
+      padding: 0;
+
+      a {
+        text-transform: none;
+        width: 65%;
+      }
+
+      @include mobile {
+        position: static;
+
+        a {
+          margin: 0 auto;
+          padding: 7px 40px;
+        }
+      }
+    }
+
+    p:nth-of-type(1) {
+      color: $color-pink;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    p:nth-of-type(3) {
+      font-size: $font-size-xxxxx-sm;
+      margin: 5px 0 0;
+    }
+
+    strong {
+      font-size: 18px;
+      font-weight: bold;
+
+      span {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    h2 {
+      font-size: $font-size-md-x-sm;
+      font-weight: bold;
+      line-height: 26.95px;
+      margin: 0 0 14px;
+    }
+
+    p {
+      font-size: $font-size-xx-sm;
+      margin-bottom: 14px;
+    }
+
+    span {
+      font-size: $font-size-xx-sm;
+    }
+
+    .timer-box {
+      border: 1px solid $color-white;
+      color: $color-pink;
+      display: inline-block;
+      margin: 4px;
+      padding: 15px 3px;
+      width: 57px;
+
+      span {
+        font-size: $font-size-md-sm;
+      }
+
+      p {
+        font-size: $font-size-xxxx-sm;
+        margin: 5px 0 0;
+      }
+    }
+
+    .timer-box:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    .timer-box:nth-of-type(4) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include tablet-up {
+
+  .full-hero__wrapper {
+    flex-direction: row;
+    height: 500px;
+    padding-right: 20px;
+  }
+
+  .timer {
+    &__full-hero {
+      background: url('../img/drive-growth.jpg') no-repeat center, url('../img/drive-growth-repeat.jpg') repeat;
+      background-origin: inherit;
+      background-size: contain;
+      height: 500px;
+      padding-top: 49px;
+    }
+
+    &__full-hero-christmas {
+      background: url('../img/hero-christmas.jpg') no-repeat left, url('../img/hero-christmas-tree.jpg') repeat;
+    }
+
+    &__full-hero-text {
+      font-size: 45px;
+      margin: 0 0 266px;
+      padding: 30px 25px 0 15px;
+
+      &--center {
+        margin-bottom: 0;
+        padding: 0 25px;
+      }
+	  }
+
+    &__full-hero-content {
+      margin-bottom: 0;
+      padding: 20px;
+      width: 320px;
+
+      span {
+        font-size: $font-size-xx-sm;
+      }
+
+      p:nth-of-type(1),
+      p:nth-of-type(2) {
+        line-height: 20px;
+      }
+    }
+
+    &__full-hero-content:hover {
+      box-shadow: 0 5px 20px rgba(0,0,0,.8);
+    }
+  }
+}

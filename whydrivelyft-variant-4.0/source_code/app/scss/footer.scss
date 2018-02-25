@@ -1,0 +1,119 @@
+.footer {
+  background-color: $color-content;
+  color: $color-dark-grey;
+  font-size: $font-size-xx-sm;
+  padding: 15px 0; //decreased the padding-top from 50 to 20, as some elements removed
+  text-align: center;
+  
+  @include mobile {
+    padding-bottom: 75px;
+  }
+
+  a {
+    color: $color-dark-grey;
+  }
+
+  &__socialmedia,
+  &__homelinks,
+  &__contactlinks {
+    margin-bottom: 10px;
+
+    ul {
+      li {
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__homelinks,
+  &__contactlinks {
+    text-transform: uppercase;
+
+    ul {
+      li:nth-of-type(4),
+      li:nth-of-type(5) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__socialmedia {
+    color: $color-white;
+    font-size: $font-size-xx-sm;
+    margin-bottom: 25px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    ul {
+      svg {
+        width: 30px;
+      }
+    }
+  }
+
+  &__homelinks {
+    font-size: $font-size-xxxx-sm;
+    margin-bottom: 5px;
+  }
+
+  &__contactlinks {
+    font-size: $font-size-xxxxx-sm;
+
+    ul {
+
+      li {
+        border-right: 1px solid $color-dark-grey;
+      }
+
+      li:nth-of-type(3) {
+        border-right: 0;
+      }
+
+      li:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-xxxx-sm;
+  }
+
+  @include mobile-up {
+
+    &__socialmedia,
+    &__homelinks,
+    &__contactlinks {
+
+      ul {
+        li {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  @include tablet-up {
+
+    .hide-tablet {
+      display: none;
+    }
+
+    &__contactlinks {
+
+      ul {
+        li:nth-of-type(2) {
+          border-right: 1px solid $color-dark-grey;
+        }
+      }
+    }
+  }
+}

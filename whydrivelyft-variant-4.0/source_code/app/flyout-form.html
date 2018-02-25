@@ -1,0 +1,60 @@
+  <!-- signup form floating-->
+<div class="overlay-full hide show-on-mobile-port"></div>
+<section class="signup-body signup__container push-below" id="apply-signup-form">
+  <section class="signup__content">
+    <div class="signup__form">
+      <div class="signup__content-cross">
+        <svg class="cross-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 348.333 348.334" style="enable-background:new 0 0 348.333 348.334;" xml:space="preserve">
+        <g><path class="cross-path" d="M336.559,68.611L231.016,174.165l105.543,105.549c15.699,15.705,15.699,41.145,0,56.85   c-7.844,7.844-18.128,11.769-28.407,11.769c-10.296,0-20.581-3.919-28.419-11.769L174.167,231.003L68.609,336.563   c-7.843,7.844-18.128,11.769-28.416,11.769c-10.285,0-20.563-3.919-28.413-11.769c-15.699-15.698-15.699-41.139,0-56.85   l105.54-105.549L11.774,68.611c-15.699-15.699-15.699-41.145,0-56.844c15.696-15.687,41.127-15.687,56.829,0l105.563,105.554   L279.721,11.767c15.705-15.687,41.139-15.687,56.832,0C352.258,27.466,352.258,52.912,336.559,68.611z" fill="#352384"/>
+        </g>
+        </svg>
+      </div>
+      <form class="signup__form-container">
+        <h3>Apply Now</h3>
+        <p>Enter your info below to get started</p>
+        <div class="signup__two-wrapper">
+          <div class="signup__wrapper">
+            <label class="signup__label" for="first_name" class="">First Name</label>
+            <input class="signup__field fs-hide" type="text" name="first_name" id="first-name" autocomplete="off">
+            <span>First name is required</span>
+          </div>
+          <div class="signup__wrapper">
+            <label class="signup__label" for="last_name">Last Name</label>
+            <input class="signup__field fs-hide" type="text" name="last_name" id="last-name" autocomplete="off">
+            <span>Last name is required</span>
+          </div>
+        </div>
+        <div class="signup__wrapper">
+          <label class="signup__label" for="email">Email</label>
+          <input class="signup__field fs-hide" type="email" name="email" id="email" autocomplete="off">
+          <span>A valid email is required</span>
+        </div>
+        <div class="signup__two-wrapper">
+          <div class="signup__wrapper">
+            <label class="signup__label">Mobile Phone Number</label>
+            <input class="signup__field fs-hide" type="tel" name="phone" value="" id="signup-phone" autocomplete="off">
+            <span class="signup__phone-err">Valid U.S.number</span>
+          </div>
+          <div class="signup__wrapper">
+            <label class="signup__label" for="region">Primary City You'll Drive In</label>
+            <input class="signup__field" type="text" name="region" placeholder="" autocomplete="off" id="signup-region">
+            <span>A city must be selected (you can change it later)</span>
+            <input type="hidden" name="location_latitude" placeholder="" id="signup-lat">
+            <input type="hidden" name="location_longitude" placeholder="" id="signup-lng">
+          </div>
+        </div>
+        <div class="signup__wrapper signup_promo">
+          <label class="signup__label signup__label--update" name="code" for="code">Bonus Code Applied</label>
+          <input class="signup__field" type="text" autocomplete="nope" name="signup-code" id="signup-code" disabled>
+        </div>
+        <div class="signup__agree">
+          <input type="checkbox" id="agree-signup-terms" name="agreeToTerms" value="false">
+          <label for="agree-signup-terms">I agree to Lyft’s <a class="js-tracker signup-js-terms track" data-track1="applyOneTOS" data-track2="applyTOS" href="terms.html?">Terms of Services</a></label>
+        </div>
+        <div class="signup__flash-message">Oops something went wrong, please try again later..</div>
+        <button class="signup__btn-submit pixel-tracker" type="button" value="Submit">Submit</button>
+        <p>Still have questions? <br class="still-br"><a class="js-tracker signup-js-applied track learn-more" data-track1="applyOneLearnMore" data-track2="applyLearnMore" href="faq.html?">Learn More</a> <br class="learn-more-br"></p>
+      </form>
+    </div>
+  </section>
+</section>

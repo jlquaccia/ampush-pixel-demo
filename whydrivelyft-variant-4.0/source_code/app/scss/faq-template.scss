@@ -1,0 +1,190 @@
+.faq {
+  font-family: "sofia-pro", sans-serif;
+  margin: 0 auto;
+
+  &__accordian-content {
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 40px 20px 0;
+  }
+
+  &__full-hero {
+    background: url('../img/faq-hero-mobile.jpg') no-repeat center center;
+    background-origin: content-box;
+    background-size: cover;
+  }
+
+  .full-hero {
+    &__wrapper {
+      max-width: 650px;
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    padding-left: 0;
+
+    @include mobile {
+      font-size: 33px;
+      font-weight: 300;
+      width: 280px;
+      text-align: left;
+      line-height: 45px;
+      padding-left: 10px;
+    }
+
+    @include mobile-up {
+      color: $color-white;
+      font-size: 40px;
+      font-weight: 100;
+      max-width: 600px;
+      padding-left: 10px;
+    }
+
+    @include tablet-up {
+      font-size: 56px;
+    }
+  }
+
+  &__tittle {
+    color: $color-content;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 30px 0 5px;
+    text-transform: uppercase;
+    @include mobile {
+      margin: 5px;
+    }
+  }
+
+  &__accordionWrapper {
+    font-weight: 400;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+    .accordionItem {
+      box-sizing: border-box;
+      display: block;
+      width: $block-container;
+    }
+
+    .accordionItemHeading {
+      background: $color-white;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: $color-purple;
+      cursor: pointer;
+      margin: 0 0 4px 19px;
+      position: relative;
+
+      &::before {
+        border: solid $color-grey-black;
+        border-width: 0 3px 3px 0;
+        content: '';
+        display: block;
+        height: 0;
+        left: -14px;
+        margin-left: -5px;
+        padding: 3px;
+        position: absolute;
+        top: 7px;
+        -moz-transform: rotate(-45deg);
+        -moz-transition: transform .33s ease 0s;
+        -ms-transform: rotate(-45deg);
+        -oms-transition: transform .33s ease 0s;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -webkit-transition: transform .33s ease 0s;
+        transition: transform .33s ease 0s;
+        width: 0;
+        }
+      }
+
+      .accordionItemHeading:hover {
+        text-shadow: -.06ex 0 $color-purple, .06ex 0 $color-purple;
+      }
+
+      .close .accordionItemContent {
+        box-sizing: border-box;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        -webkit-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+        transition: padding .4s ease-out;
+      }
+
+      .open .accordionItemContent {
+        background-color: $color-white;
+        box-sizing: border-box;
+        display: block;
+        padding: 5px 20px 20px;
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -ms-transform-origin: top;
+        -o-transform-origin: top;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -ms-transition: -ms-transform .4s ease;
+        -o-transition: -o-transform .4s ease;
+        -webkit-transition: -webkit-transform .4s ease-out;
+        transition: transform .4s ease;
+        width: $block-container;
+
+        ul{
+          list-style-type: disc;
+          padding-left: 30px;
+        }
+      }
+
+      .open .accordionItemHeading {
+        background-color: $color-white;
+        color: $color-purple;
+        text-shadow: -.06ex 0 $color-purple, .06ex 0 $color-purple;
+
+      &::before {
+        border: solid $color-grey-black;
+        border-width: 0 3px 3px 0;
+        content: '';
+        display: block;
+        height: 0;
+        left: -14px;
+        margin-left: -5px;
+        padding: 3px;
+        position: absolute;
+        top: 7px;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -moz-transition: transform .33s ease 0s;
+        -oms-transition: transform .33s ease 0s;
+        -webkit-transition: transform .33s ease 0s;
+        transition: transform .33s ease 0s;
+        width: 0;
+        }
+      }
+    }
+
+
+
+  @include tablet-up {
+
+    &__container {
+      min-height: 500px;
+    }
+
+    &__full-hero {
+      background-image: url('../img/faq-hero.jpg');
+      background-position: 75%;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+/* Verify Phone page */
+.block {
+  &__verify-phone-container {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    @include flex;
+    height: 100vh;
+  }
+
+  &__verify-phone-form {
+    -webkit-box-pack: center;
+    justify-content: center;
+    @include flex;
+    padding: 0 $block-spacing-24;
+    text-align: center;
+    width: $block-container;
+  }
+
+  &__verify-form-container {
+    font-size: $font-size-xxx-sm;
+    max-width: 360px;
+
+    p {
+      padding: $block-spacing-15 0;
+    }
+  }
+
+  &__verify-phone-title {
+    color: $color-black-shade;
+    font-size: $font-size-md;
+    line-height: 30px;
+    margin-top: 0;
+  }
+
+  &__verify-code {
+    border: 0;
+    border-bottom: $border-black;
+    font-size: $font-size-lg;
+    height: 40px;
+    letter-spacing: 32px;
+    outline: 0;
+    text-align: center;
+    text-indent: 32px;
+    width: 88%;
+  }
+
+  &__verify-phone-bg-img,
+  &__resend-verification-code {
+    display: none;
+  }
+
+  &__verify-phone-logo {
+    display: block;
+    margin: 21px 0 14px;
+
+    svg {
+      height: 30px;
+      width: 42px;
+    }
+  }
+
+  &__cta {
+    &--code {
+      background-color: $color-pink;
+      display: block;
+      font-weight: normal;
+      margin-top: 35px;
+      padding: $block-spacing-15 + 1;
+      text-transform: none;
+      width: $block-container;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      opacity: .65;
+    }
+  }
+
+  &__user-phone-no {
+    color: $color-form-shadow;
+  }
+
+  &__resend-verify {
+    border: 1px solid $color-gery-shade;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: $font-size-x-sm;
+    line-height: $line-height-24;
+    outline: 0;
+    padding: 12px;
+    width: $block-container;
+  }
+
+  &__form-error {
+    color: $color-error-text;
+    display: none;
+    margin: $block-spacing-24 0 0;
+    text-align: center;
+  }
+
+  @include tablet-up {
+    &__verify-code {
+      width: $block-container;
+    }
+
+    &__verify-phone-logo {
+      svg {
+        height: 45px;
+        width: 64px;
+      }
+    }
+
+    &__verify-phone-title {
+      font-size: $font-size-lg + 2;
+    }
+
+    &__verify-phone-form {
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      align-items: center;
+      justify-content: center;
+      @include flex;
+      padding: 0;
+      text-align: center;
+      width: $block-container;
+    }
+
+    &__verify-code {
+      height: 51px;
+    }
+  }
+
+  @include sm-desktop-up {
+    &__verify-form-container {
+      @include animation;
+      font-size: $font-size-x-sm;
+      max-width: 400px;
+      position: relative;
+    }
+
+    &__verify-phone-logo {
+      margin: 0;
+      padding-bottom: $block-spacing-40 + $block-spacing-40;
+    }
+
+    &__verify-phone-form {
+      text-align: left;
+      width: 50%;
+    }
+
+    &__cta--code {
+      font-size: $font-size-x-sm;
+      margin-top: $block-spacing-40 + $block-spacing-40;
+    }
+
+    &__verify-phone-bg-img {
+      @include animation;
+      background: url('../img/verify-phone-page-bg.jpg');
+      background-size: cover;
+      display: block;
+      width: 50%;
+    }
+  }
+}

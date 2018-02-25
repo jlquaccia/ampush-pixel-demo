@@ -1,0 +1,447 @@
+.blog-new {
+
+  .full-hero {
+    &__wrapper {
+       position: relative;
+    }
+  }
+
+  &__link-header,
+  &__hero-header {
+    color: $color-purple;
+     p {
+       color: $color-content;
+       padding: 10px 0;
+     }
+  }
+
+  &__link-header:hover {
+    color: $color-purple;
+    text-decoration: underline;
+  }
+
+  &__hero-header {
+
+    &:hover {
+      text-decoration: none;
+
+      h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .reset-position {
+    position: inherit;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 930px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .blog {
+
+    &__full-hero {
+      background: url('../img/nyc_wide_angle.jpg') no-repeat center center;
+      background-origin: content-box;
+      background-size: cover;
+    }
+
+    &__full-hero-content {
+      background-color: $color-white;
+      color: $color-content;
+      left: 50%;
+      margin-left: -125px;
+      opacity: .9;
+      padding: 16px;
+      position: absolute;
+      text-align: center;
+      top: 50px;
+      transition: .2s ease-out;
+      width: 250px;
+      // @include mobile-up {
+      //   left: 50%;
+      // }
+      // @include tablet-up {
+      //   left: 13%;
+      // }
+      @include tablet-down {
+        margin: 0;
+        margin-top: 64px;
+        transform: translateX(-50%);
+        width: 290px;
+        p {
+          padding: 0px;
+        }
+      }
+
+      @include mobile {
+        margin-top: -30px;
+      }
+
+      @include mobile-up {
+        margin-top: 64px;
+      }
+
+      hr {
+        margin-top: 3px;
+      }
+
+      h2 {
+        color: $color-purple;
+        font-size: 19px;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      h3{
+        color: $color-purple;
+        font-size: $font-size-xxx-sm;
+        margin: 8px;
+      }
+
+      .read-more {
+        font-weight: 700;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .recent-posts {
+    display: none;
+  }
+
+  .recent-posts.active-post {
+    display: block;
+  }
+  // Common css of most-recent and recommended block
+  .most-recent,
+  .recommended {
+    padding: 0 20px;
+
+    h2 {
+      border-bottom: 2px solid $color-purple;
+      margin-bottom: 0;
+    }
+
+    &__heading {
+      color: $color-purple;
+      font-size: $font-size-md-sm;
+      font-weight: 300;
+    }
+  }
+
+  .most-recent {
+    margin-top: 29px;
+
+    &__item {
+      margin: 10px 0 25px;
+
+      span {
+        font-size: $font-size-xx-sm;
+      }
+
+      .head {
+        color: $color-purple;
+        font-size: $font-size-normal;
+        font-weight: 700;
+        margin: 11px 0 6px;
+      }
+
+      &-read-more {
+        color: $color-pink;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .recommended {
+    &__item {
+      margin: 10px 0 25px;
+    }
+
+    &__item-content {
+      span {
+        font-size: $font-size-xx-sm;
+      }
+
+      .head {
+        color: $color-purple;
+        font-size: $font-size-normal;
+        font-weight: 700;
+        margin: 11px 0 6px;
+      }
+    }
+
+    &__item-read-more {
+      color: $color-pink;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .see-all-blog-posts {
+    color: $color-pink;
+    display: none;
+    font-weight: 300;
+    margin: 35px 0;
+    text-align: center;
+  }
+
+  .previous-next {
+    font-size: $font-size-xxxx-sm;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    padding: 0 20px;
+
+    i {
+      border: solid $color-pink;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      margin: 0 2px;
+      padding: 3px;
+    }
+
+    .blog-prev {
+      display: none;
+      float: left;
+      text-decoration: none;
+
+      .left-arrow {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+    }
+
+    .blog-next {
+      float: right;
+      text-decoration: none;
+
+      .right-arrow {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .blog {
+    background-color: $color-cta;
+    margin-top: 1px;
+    padding: 15px 5px;
+    text-align: center;
+
+    &__cta {
+      color: $color-white;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+
+  .subscribe {
+    background-color: $color-purple;
+    color: $color-white;
+    padding: 20px 10px;
+    text-align: center;
+
+    span {
+      font-weight: 300;
+    }
+
+    span:nth-of-type(1) {
+      font-weight: 500;
+    }
+
+    input {
+      border: 1px solid $color-white;
+      border-radius: 5px;
+      margin: 15px 5px 0 20px;
+      min-width: 135px;
+      padding: 8px 10px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input::placeholder {
+      font-style: italic;
+    }
+
+    &__submit {
+      background: none;
+      border: 1px solid $color-white;
+      border-radius: 5px;
+      color: $color-white;
+      cursor: pointer;
+      margin-top: 15px;
+      padding: 8px 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  @include mobile-up {
+
+    .see-all-blog-posts {
+      float: left;
+      margin: 0 20px;
+    }
+// To-DO to be removed
+    .footer {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet-up {
+
+    .show-tablet {
+      display: block;
+    }
+
+    .hide-tablet-up {
+      display: none;
+    }
+
+    .blog {
+      &__full-hero {
+        background-image: url('../img/nyc_wide_angle.jpg');
+      }
+
+      &__full-hero-content {
+        position: static;
+        margin-left: 0;
+        transform: none;
+        width: 435px;
+
+        h2 {
+          font-size: $font-size-md-x-sm;
+          // margin-bottom: $font-size-md-x-sm;
+        }
+
+        p:nth-of-type(1) {
+           margin: 10px 0;
+        }
+      }
+
+      &__full-hero-content:hover {
+        box-shadow: 0 5px 20px rgba(0,0,0,.8);
+        transform: translateY(-3px) scale(1.02);
+
+        h2 {
+          text-shadow: -.03ex 0 $color-purple, .03ex 0 $color-purple;
+        }
+      }
+    }
+
+    .recent-posts{
+      display: block;
+    }
+
+    .most-recent {
+      float: left;
+      margin-top: 0;
+      max-width: 57%;
+    }
+
+    .see-all-blog-posts {
+      display: block;
+    }
+
+    .previous-next {
+      display: none;
+    }
+
+    .recommended {
+      float: right;
+      max-width: 30%;
+
+      span {
+        display: none;
+      }
+
+      &__item {
+        @include flex;
+        align-items: center;
+        margin-top: 85px;
+        position: relative;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      &__item-content {
+        @include flex;
+        align-items: center;
+        background-color: $color-content;
+        bottom: -49px;
+        color: $color-white;
+        font-size: $font-size-xx-sm;
+        font-weight: 700;
+        left: 5%;
+        line-height: 19px;
+        max-height: 46px;
+        opacity: .8;
+        padding: 12px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        width: 78%;
+
+        a {
+          color: $color-white;
+        }
+
+        .head {
+          color: $color-white;
+          font-size: $font-size-xxx-sm;
+          margin: 0;
+        }
+      }
+
+      &__item:nth-of-type(1) {
+        margin-top: 10px;
+      }
+    }
+
+    .blog {
+      background-color: $color-white;
+
+      &__cta {
+        background-color: $color-cta;
+        border: 1px solid $color-cta;
+        border-radius: 5px;
+        padding: 9px 50px;
+
+        &:hover {
+          background-color: $color-cta-hover;
+          border: 1px solid $color-cta-hover;
+        }
+      }
+    }
+  }
+
+  //for breaking footer links in two lines like nav links
+  @media only screen and (min-width: 815px) {
+
+    .subscribe {
+
+      &__break {
+        display: none;
+      }
+
+      input,
+      &__submit {
+        margin-top: 0;
+      }
+    }
+  }
+}

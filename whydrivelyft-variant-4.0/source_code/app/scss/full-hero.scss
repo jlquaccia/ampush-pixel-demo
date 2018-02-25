@@ -1,0 +1,27 @@
+.full-hero {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: no-repeat center center;
+  background-size: cover;
+  display: table;
+  height: $height-mobile;
+  width: 100%;
+
+  &__wrapper {
+    @include flex;
+    align-items: center;
+    height: $height-mobile;
+    margin: 0 auto;
+    max-width: 930px;
+  }
+
+  @include tablet-up {
+    height: $height-desktop;
+
+    &__wrapper {
+      height: $height-desktop;
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>cell_phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="cell_phone" sketch:type="MSArtboardGroup">
+            <g sketch:type="MSLayerGroup" transform="translate(23.000000, 10.000000)">
+                <path d="M28.0348769,59.5319102 L5.12189818,59.5319102 C2.45137475,59.5319102 0.286930253,57.3726546 0.286930253,54.7093158 L0.286930253,4.96236453 C0.286930253,2.29902573 2.45137475,0.139770115 5.12189818,0.139770115 L28.0348769,0.139770115 C30.7050491,0.139770115 32.8694936,2.29902573 32.8694936,4.96236453 L32.8694936,54.7093158 C32.8694936,57.3726546 30.7050491,59.5319102 28.0348769,59.5319102 L28.0348769,59.5319102 Z" id="Stroke-1" stroke="#B2C1C4" stroke-width="1.5" sketch:type="MSShapeGroup"></path>
+                <path d="M4.00051716,8.97296114 L29.1555555,8.97296114 L29.1555555,48.8540339 L4.00051716,48.8540339 L4.00051716,8.97296114 Z" id="Stroke-2" stroke="#B2C1C4" stroke-width="1.5" sketch:type="MSShapeGroup"></path>
+                <path d="M16.5783875,52.7104981 C17.3584023,52.7104981 17.9930204,53.3434921 17.9930204,54.1215107 C17.9930204,54.8995293 17.3584023,55.5325233 16.5783875,55.5325233 C15.7983727,55.5325233 15.1634035,54.8995293 15.1634035,54.1215107 C15.1634035,53.3434921 15.7983727,52.7104981 16.5783875,52.7104981 M16.5783875,51.3092939 C15.0211675,51.3092939 13.7589554,52.5686262 13.7589554,54.1215107 C13.7589554,55.6747455 15.0211675,56.9337274 16.5783875,56.9337274 C18.1352563,56.9337274 19.3978197,55.6747455 19.3978197,54.1215107 C19.3978197,52.5686262 18.1352563,51.3092939 16.5783875,51.3092939" id="Fill-3" fill="#B2C1C4" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

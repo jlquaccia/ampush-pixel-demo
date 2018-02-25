@@ -1,0 +1,73 @@
+  /* Why Lyft */
+.block {
+  
+  &__why-lyft-list {
+    ul {
+      @include flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin-bottom: 10px;
+      text-align: center;
+      width: $block-container;
+    }
+    
+    h4 {
+      font-size: $font-size-md-x-sm + 1;
+    }
+  }
+
+  &__why-lyft-icon {
+    margin: 0 auto;
+    width: 55px;
+    height: 58px;
+    color: white;
+    position: relative;
+    svg {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+    }
+    svg path {
+      fill: $color-purple;
+    }
+  }
+
+  @include mobile-up {
+    &__why-lyft-icon {
+
+      svg path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  @include tablet-up {
+
+    &__why-lyft-list {
+
+      li {
+        -ms-flex: 1 0 0%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 1 0 0%;
+        flex: 1 0 0%;
+        padding: 0 $block-spacing-30;
+      }
+    }
+  }
+}
+
+.block.why-lyft{
+  background-color: #352384;
+  h4{
+    margin: 8px 0;
+  }
+  .questions__question--open {
+    
+    .questions__ans {
+      padding: 10px;
+    }
+  }
+}
+

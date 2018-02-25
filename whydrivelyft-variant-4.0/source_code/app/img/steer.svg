@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>steer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1111.000000, -694.000000)" stroke="#352384">
+            <g id="steer" transform="translate(1111.000000, 694.000000)">
+                <circle id="Oval-2" stroke-width="10" cx="50" cy="50" r="45"></circle>
+                <circle id="Oval-2" stroke-width="8" fill="#352384" cx="51" cy="51" r="12"></circle>
+                <path d="M34,48 L5,43" id="Line-3" stroke-width="8" stroke-linecap="square"></path>
+                <path d="M92,48 L66,43" id="Line-3" stroke-width="8" stroke-linecap="square" transform="translate(79.000000, 45.500000) scale(-1, 1) translate(-79.000000, -45.500000) "></path>
+                <path d="M51.5,92.4375 L51.5,66.5625" id="Line-4" stroke-width="8" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
