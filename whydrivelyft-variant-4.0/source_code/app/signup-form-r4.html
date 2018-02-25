@@ -51,7 +51,6 @@
     <meta name="theme-color" content="#ffffff">
     <title>Become a Driver - WhyDriveLyft</title>
     <link href="css/simpleform.min.css" rel="stylesheet">
-    {# GOOGLE_ANALYTICS_CODE #}
     <!-- Ampush Facebook Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -102,8 +101,27 @@
 <body id="top" class="signup-body">
     <div class="signup__flash-message">Oops something went wrong.. please try again soon</div>
     <section class="landing-page" id="apply-signup-form">
-        {# PROMO-BAR #}
-        {# MAIN_NAV #}
+      <section class="promo-banner">
+        <div class="container">
+          <p><strong>GET A <span id="bonus">$500</span> BONUS. </strong><span class="showDesk">Apply now and get <span id="bonus-a">$500</span> after you complete <span id="rides">150</span> rides within <span id="days">45</span> days.</span> <a id="seeTerms" class="track" data-track1="bannerSeeTerms">See terms</a></p>
+        </div>
+      </section>
+      <nav class="nav fixed-nav clearfix">
+        <div class="max-wrapper">
+          <h1 title="WhyDriveLyft.com" class="nav__lyft-logo">
+            <a class="nav__wdl-link js-tracker experimenter track" href="index.html?"><img src="img/why-drive-lyft-logo.png" data-track1="whydrivelyftlogo"></a>
+          </h1>
+          <div class="nav__tabs clearfix">
+            <a class="nav__large-decive-tabs js-tracker experimenter track" data-track1="home" href="index.html?">Home</a>
+            <a class="js-tracker track" data-track1="howItWorks" href="how-it-works.html?">How it works</a>
+            <a class="js-tracker track" data-track1="blog" href="blog.html?">Blog</a>
+            <a class="js-tracker track" data-track1="testimony" href="testimony.html?">Testimonials</a>
+            <a class="js-tracker track" data-track1="FAQ" href="faq.html?">FAQ</a>
+            <!-- step 3: add class to select navbar cta -->
+            <a class="nav__large-decive-tabs tab-cta" id="apply-nav" href="signup-form-r4.html?">Apply Now</a>
+          </div>
+        </div>
+      </nav>
         <section class="signup__container">
             <section class="signup__content">
                 <div class="signup__form">
@@ -156,7 +174,14 @@
             </section>
         </section>
     </section>
-      {# FOOTER #}
+    <footer class="footer">
+      <div class="footer__homelinks">
+        <ul>
+          <li><a href="privacy-policy.html?" class="js-tracker track" data-track1="privacyPolicy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer__copyright">©2018 WhyDriveLyft.com</div>
+    </footer>
     <a id="goto-top" href="#top" class="js-tracker goto-top hide-goto"><img src="img/top-hover.png" alt="Go to Top"></a>
     <script src="js/simpleform.min.js"></script>
 
