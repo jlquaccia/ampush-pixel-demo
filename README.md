@@ -4,11 +4,11 @@
 -	Copy the URL
 -	Open Terminal
 - Inside Terminal, enter the following commands (without the quotation marks) and press enter after each to run them.
-  - # cd Desktop
-  - # git clone https://github.com/jlquaccia/ampush-pixel-demo.git
-  - # npm i
-  - # atom . (this will open the text editor)
+  - *cd Desktop*
+  - *git clone https://github.com/jlquaccia/ampush-pixel-demo.git*
+  - *npm i*
+  - *atom .* (this will open the text editor)
 - Next, go back to Terminal and create a new tab by using the shortcut cmd + t
 - Inside of the new tab run
-  - # npm start
+  - *npm start*
 - Navigate to localhost:3000 to view the project.
