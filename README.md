@@ -6,6 +6,7 @@
 - Inside Terminal, enter the following commands and press enter after each to run them:
   - *cd Desktop*
   - *git clone https://github.com/jlquaccia/ampush-pixel-demo.git*
+  - *cd ampush-pixel-demo*
   - *npm i* (this will install all dependencies for this project)
   - *atom .* (this will open the text editor)
 - Next, go back to Terminal and create a new tab by using the shortcut cmd + t
