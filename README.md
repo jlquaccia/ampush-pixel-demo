@@ -3,12 +3,12 @@
 -	Make sure to use "Clone with HTTPS" (default)
 -	Copy the URL
 -	Open Terminal
-- Inside Terminal, enter the following commands (without the quotation marks) and press enter after each to run them.
+- Inside Terminal, enter the following commands and press enter after each to run them:
   - *cd Desktop*
   - *git clone https://github.com/jlquaccia/ampush-pixel-demo.git*
-  - *npm i*
+  - *npm i* (this will install all dependencies for this project)
   - *atom .* (this will open the text editor)
 - Next, go back to Terminal and create a new tab by using the shortcut cmd + t
-- Inside of the new tab run
+- Inside of the new tab run the following command to start up the server:
   - *npm start*
-- Navigate to localhost:3000 to view the project.
+- Navigate to localhost:3000 in Chrome to view the project.
