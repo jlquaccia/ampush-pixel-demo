@@ -123,6 +123,21 @@
       //   safariAmpt.init(pid, initiative);
       //   window.isSafariTrackerLoad = true;
       // };
+
+      // ================================================================================================
+      // step 2: firing pixels on pageview Pt. II
+      // ================================================================================================
+      // // Fire Ampush and Safari Tracker
+      //   let intervalObj = setInterval(function() {
+      //     if (window.isUTMContentLoad) {
+      //       ampt.pageview(window.getUtmParams());
+      //       ampt.track('Apply1', window.getUtmParams());
+      //
+      //       safariAmpt.pageview(window.getUtmParams());
+      //       clearInterval(intervalObj);
+      //     }
+      //   }, 200);
+      // // End Fire Ampush Tracker
     </script>
 </head>
 
@@ -229,20 +244,6 @@
         t.setAttribute("src",path);
         "undefined"!=typeof t&&document.getElementsByTagName("head")[0].appendChild(t);}();
     </script>
-
-    <!-- Fire Ampush and Safari Tracker -->
-    <script>
-      let intervalObj = setInterval(function() {
-        if (window.isUTMContentLoad) {
-          ampt.pageview(window.getUtmParams());
-          ampt.track('Apply1', window.getUtmParams());
-
-          safariAmpt.pageview(window.getUtmParams());
-          clearInterval(intervalObj);
-        }
-    }, 200);
-    </script>
-    <!-- End Fire Ampush Tracker -->
     <script>
       function pixelDelay(URL) {
         setTimeout(function() {
