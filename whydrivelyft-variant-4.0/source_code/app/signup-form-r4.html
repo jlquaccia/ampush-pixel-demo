@@ -118,21 +118,19 @@
       // t.setAttribute("src","//files.ampush.io/js/tracker2.1.js?"+(new Date).valueOf());
       // "undefined"!=typeof t&&document.getElementsByTagName("head")[0].appendChild(t);
       // t.onload=function(){
-      //   safariAmpt.init(pid, initiative);
-      //   window.isSafariTrackerLoad = true;
+      //   ampt.init("lyft", "ce4c0c2b8-3c40-4963-9164-198a13f7689e");
+      //   window.isTrackerLoad = true;
       // };
 
       // ================================================================================================
       // step 2: firing pixels on pageview Pt. II
       // ================================================================================================
-      // // Fire Ampush and Safari Tracker
-      //   let intervalObj = setInterval(function() {
-      //     if (window.isUTMContentLoad) {
-      //       safariAmpt.pageview(window.getUtmParams());
-      //       clearInterval(intervalObj);
-      //     }
-      //   }, 200);
-      // // End Fire Ampush Tracker
+      // let intervalObj = setInterval(function() {
+      //   if (window.isUTMContentLoad) {
+      //     ampt.pageview(window.getUtmParams());
+      //     clearInterval(intervalObj);
+      //   }
+      // }, 200);
     </script>
 </head>
 
