@@ -80,24 +80,24 @@
       // ================================================================================================
       // step 1: initialization Pt. I
       // ================================================================================================
-      let t = document.createElement("script");
-      t.setAttribute("type","text/javascript");
-      t.setAttribute("src","//files.ampush.io/js/tracker2.1.js?"+(new Date).valueOf());
-      "undefined"!=typeof t&&document.getElementsByTagName("head")[0].appendChild(t);
-      t.onload=function(){
-        ampt.init("lyft", "ce4c0c2b8-3c40-4963-9164-198a13f7689e");
-        window.isTrackerLoad = true;
-      };
+      // let t = document.createElement("script");
+      // t.setAttribute("type","text/javascript");
+      // t.setAttribute("src","//files.ampush.io/js/tracker2.1.js?"+(new Date).valueOf());
+      // "undefined"!=typeof t&&document.getElementsByTagName("head")[0].appendChild(t);
+      // t.onload=function(){
+      //   ampt.init("lyft", "ce4c0c2b8-3c40-4963-9164-198a13f7689e");
+      //   window.isTrackerLoad = true;
+      // };
 
       // ================================================================================================
       // step 2: firing pixels on pageview Pt. I
       // ================================================================================================
-      let intervalObj = setInterval(function() {
-        if (window.isUTMContentLoad) {
-          ampt.pageview(window.getUtmParams());
-          clearInterval(intervalObj);
-        }
-      }, 200);
+      // let intervalObj = setInterval(function() {
+      //   if (window.isUTMContentLoad) {
+      //     ampt.pageview(window.getUtmParams());
+      //     clearInterval(intervalObj);
+      //   }
+      // }, 200);
     </script>
   </head>
   <body id="top" nav-menu="home">
@@ -337,11 +337,11 @@
       // let applyBottom = document.getElementById('apply-bottom');
       //
       // applyNav.addEventListener('click', function() {
-      //   safariAmpt.track('apply-nav', window.getUtmParams());
+      //   ampt.track('apply-nav', window.getUtmParams());
       // });
       //
       // applyBottom.addEventListener('click', function() {
-      //   safariAmpt.track('apply-bottom', window.getUtmParams());
+      //   ampt.track('apply-bottom', window.getUtmParams());
       // });
     </script>
   </body>
